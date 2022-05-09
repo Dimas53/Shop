@@ -1,0 +1,5 @@
+<div *ngIf="products$ | async as products" class="dashboard">
+  <app-product *ngFor="let product of $any(products) | sorting: productServ.type" [product]="product" class="box">
+
+  </app-product>
+</div>
